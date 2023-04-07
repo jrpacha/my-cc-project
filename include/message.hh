@@ -1,3 +1,4 @@
+// message.hh
 #ifndef _MY_PROJECT_INCLUDE_MESSAGE_HH_
 #define _MY_PROJECT_INCLUDE_MESSAGE_HH_
 

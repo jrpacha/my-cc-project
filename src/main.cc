@@ -7,7 +7,7 @@ int main()
 {
   message m;
 
-  //Print message
+  //Just print message
   m.print_message();
 
   return EXIT_SUCCESS;

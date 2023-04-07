@@ -1,4 +1,4 @@
-# Template for C++ projects
+# Test C++ project
 You can create a github repository for your project using this template, then
 clone it to your local machine, add all your stuff and push it to 
 [github.com](https://www.github.com).
