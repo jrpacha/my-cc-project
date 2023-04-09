@@ -1,0 +1,1 @@
+- [ ] Add an <tt>install</tt> target.
