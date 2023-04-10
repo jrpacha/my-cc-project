@@ -1,2 +1,2 @@
-- [ ] Add an <tt>install</tt> target.
+- [ ] Add an <tt>install</tt> target
 - [X] Fix push problems
