@@ -32,7 +32,6 @@ DEPS=$(patsubst %,$(DEPDIR)/%.d,$(SRCS))
 
 LIBS_ALL=$(wildcard $(LIBDIR)/*.a)
 LIBS=$(filter-out %_flymake.a, $(notdir $(basename $(LIBS_ALL))))
-
 #LDFLAGS+= -dynamic $(LIBS_ALL)
 LDFLAGS+= -L$(LIBDIR) $(LIBS:lib%=-l%) #-dynamic
 
@@ -46,7 +45,7 @@ default: build
 
 build: $(EXEDIR)/$(PROG)
 
-$(EXEDIR)/$(PROG): $(OBJS) 
+$(EXEDIR)/$(PROG): $(OBJS) $(LIBDIR)/*.a
 	$(CXX) $^ $(LDFLAGS) $(CCLIBS) $(CXXLIBS) -o $@ 
 	@echo
 	@echo "$(EXEDIR)/$(PROG) created."  
@@ -81,4 +80,4 @@ $(DEPDIR)/%.d:;
 
 -include $(DEPS)
 
-.PHONY: all default build install run clean mrproper $(DIRS)
+.PHONY: all default build install run clean mrproper help $(DIRS)

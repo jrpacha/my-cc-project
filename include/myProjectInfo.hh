@@ -7,9 +7,13 @@
 class Project {
     private:
         std::string name;
-        int number;
+        std::string code;
+        std::string description;
     public: 
-        Project(std::string _name, int _number);
+        Project(std::string _name,
+                std::string _code,
+                std::string _description);
+
         void show_project_info();
 };
 

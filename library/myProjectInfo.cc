@@ -1,13 +1,21 @@
 #include "myProjectInfo.hh"
 
-Project::Project(std::string _name, int _number)
+Project::Project(std::string _name,
+                 std::string _code,
+                 std::string _description)
 {
     name = _name; 
-    number = _number;
+    code = _code;
+    description = _description;
 }
    
 void Project::show_project_info()
 {
-    std::cout << "Project name: " << name << std::endl;
-    std::cout << "Code: " << number << std::endl;
+    std::cout 
+        << "Project name: " << name
+        << " Code: " << code 
+        << "\n"
+        << "Description: "
+        << description
+        << "\n";
 }
