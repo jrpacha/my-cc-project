@@ -10,3 +10,10 @@ clean:
 
 mrproper: clean
 	rm libmyProjectInfo.a
+
+help: 
+	@echo "make           # builds the library"
+	@echo "make clean     # removes the .o files"
+	@echo "make mrproper  # removes the library as well"
+
+.PHONY: clean mrproper
