@@ -1,5 +1,5 @@
 libmyProjectInfo.a: myProjectInfo.o
-	libtool -static -o libmyProjectInfo.a myProjectInfo.o
+	$(AR) rc libmyProjectInfo.a myProjectInfo.o
 	cp -f libmyProjectInfo.a ../lib
 
 myProjectInfo.o: myProjectInfo.cc ../include/myProjectInfo.hh
