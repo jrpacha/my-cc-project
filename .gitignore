@@ -16,8 +16,8 @@ bin/
 *.fot
 *.cb
 *.cb2
-**/*.o
-**/*.d
+*.o
+*.d
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
