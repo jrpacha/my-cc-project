@@ -1,11 +1,13 @@
-# Test C++ project
+# Template for C/C++
 You can create a github repository for your project using this template, then
-clone it to your local machine, add all your stuff and push it to 
+clone it to your local machine, add all your stuff and push it back to 
 [github.com](https://www.github.com).
 
-- First in, [github.com](htpps://www.github.com), create a _repo_ for your project
-using this template. From now on, I assume this is already done and you have 
-named your project as `my-project`.
+- First, in [github.com](htpps://www.github.com), create a _repo_ for your project
+using this template. 
+![image](images/create-a-project-from-a-template.png)
+From now on, I assume this is already done and you have
+named your project as `my-cc-project`.
 
 - Then, clone the repo to some local folder in your machine. To fix ideas,
 let's clone it in the directory <tt>Desktop</tt> of your _local_ user account,
@@ -57,62 +59,72 @@ i.e.,
 ```bash
 ~ Desktop/my-cc-project$ make clean
 rm -f .o/*.o .d/*.d
-rmdir .o .d
+rmdir .o .d >/dev/null
 ```
 - `make mrproper` removes also the <tt>bin</tt> directory that held the
 executable file,
 ```bash
 ~ Desktop/my-project$ make mrproper
 rm -f .o/*.o .d/*.d
-rmdir .o .d
-
-rm -rf bin
+rmdir .o .d >/dev/null
+rm -f bin/*
+rmdir bin >/dev/null
 ```
-- Optional: replace this <tt>README.md</tt> with a new one with a
+- Optional (but convenient): replace this <tt>README.md</tt> with a new one with a
 description of your project.
-- Create a git repo and push it to [github.com](https://www.github.com)
+- Stage the changes you have made to your project,
+ commit them and push your repo to [github.com](htts://www.github.comCreate a git repo and push it to [github.com](https://www.github.com)
 ```bash
-~ Desktop/my-project$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+~ Desktop/my-cc-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   Makefile
-        modified:   README.md
-        modified:   src/message.cc
+	modified:   README.md
+	modified:   include/message.hh
+	modified:   src/main.cc
+	modified:   src/message.cc
 
-no changes added to commit (use "git add" and/or "git commit -a")
+~ Desktop/my-cc-project$ git add .
+~ Desktop/my-cc-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
-~ Desktop/my-project$ git add Makefile README.md src/message.cc
-~ Desktop/my-project$ git commit -m "First commit of my-projecti"
-[master 6f1c52b] First commit of my-project 
- 3 files changed, 127 insertions(+), 50 deletions(-)
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   include/message.hh
+	modified:   src/main.cc
+	modified:   src/message.cc
+``` 
+- Then commit the changes
+```bash
+~ Desktop/my-cc-project$ git commit -m "1st commit of my-cc-project"
+main 1967aba] 1st commit of my-cc-project
+ 4 files changed, 7 insertions(+), 6 deletions(-)
 
-~ Desktop/my-project$ git add Makefile README.md src/message.cc
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+~ Desktop/my-cc-project$ git status
+git status                                                                ─╯
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
-``` 
-- Finally, push your report to [github.com](https://www.github.com):
+```
+- Finally push the changes to your remote repo in [github.com](www.github.com) 
 ```bash
-~ Desktop/my-project$ git add Makefile README.md src/message.cc
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (10/10), done.
-Writing objects: 100% (10/10), 3.35 KiB | 3.35 MiB/s, done.
-Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
-remote: This repository moved. Please use the new location:
-remote:   git@github.com:jrpacha/my-project.git
-To github.com:jrpacha/hello-C.git
-   0133986..d396cc9  master -> master
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 643 bytes | 643.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:jrpacha/my-cc-project.git
+   cd5573e..1967aba  main -> main
 ```
-
 ### References
 - [GNU Make. A program for Directing
 Recompilation](https://make.mad-scientist.net/papers/advanced-auto-dependency-generation). 

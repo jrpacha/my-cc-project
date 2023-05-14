@@ -1,18 +1,36 @@
-*.mlx -crlf -diff -merge
-*.mat -crlf -diff -merge
-*.fig -crlf -diff -merge
-*.p -crlf -diff -merge
-*.slx -crlf -diff -merge
-*.mdl -crlf -diff -merge
-*.mdlp -crlf -diff -merge
-*.slxp -crlf -diff -merge
-*.sldd -crlf -diff -merge
-*.mexa64 -crlf -diff -merge
-*.mexw64 -crlf -diff -merge
-*.mexmaci64 -crlf -diff -merge
-*.xlsx -crlf -diff -merge
-*.docx -crlf -diff -merge
-*.pdf -crlf -diff -merge
-*.jpg -crlf -diff -merge
-*.png -crlf -diff -merge
-*.eps -crlf -diff -merge
+# Sources
+*.c     text diff=c
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.c++   text diff=cpp
+*.hpp   text diff=cpp
+*.h     text diff=c
+*.h++   text diff=cpp
+*.hh    text diff=cpp
+:
+# Compiled Object files
+*.slo   binary
+*.lo    binary
+*.o     binary
+*.obj   binary
+
+# Precompiled Headers
+*.gch   binary
+*.pch   binary
+
+# Compiled Dynamic libraries
+*.so    binary
+*.dylib binary
+*.dll   binary
+
+# Compiled Static libraries
+*.lai   binary
+*.la    binary
+*.a     binary
+*.lib   binary
+
+# Executables
+*.exe   binary
+*.out   binary
+*.app   binary
