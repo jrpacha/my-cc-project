@@ -136,4 +136,4 @@ Manual](https://www.gnu.org/software/make/manual/) at
 example](http://nuclear.mutantstargoat.com/articles/make/) by John
 Tsiombikas <a
 href="mailto:nuclear@member.fsf.org">nuclear@member.fs.org</a>. I wrote
-the `Makefile` in this template ifollowing sections 5 and 6 of this document.
+the `Makefile` in this template following sections 5 and 6 of this document.
